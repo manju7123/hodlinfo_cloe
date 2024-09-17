@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HodlInfo Clone</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="dark-mode">
+    <header>
+        <div class="navbar">
+            <h1 class="logo">HODLINFO</h1>
+            <div class="dropdowns">
+                <select class="currency-select">
+                    <option>INR</option>
+                    <option>USD</option>
+                </select>
+                <select class="currency-select">
+                    <option>BTC</option>
+                    <option>ETH</option>
+                </select>
+                <button class="buy-button">Buy BTC</button>
+            </div>
+            <div class="right-menu">
+                <button class="telegram-btn">Connect Telegram</button>
+                <div class="toggle-switch">
+                    <input type="checkbox" class="toggle-btn" id="theme-toggle" />
+                    <label for="theme-toggle" class="toggle-label"></label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="crypto-table">
+        <h2>Best Price to Trade</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Platform</th>
+                    <th>Last Price</th>
+                    <th>Buy Price</th>
+                    <th>Sell Price</th>
+                    <th>Volume</th>
+                    <th>Base Unit</th>
+                </tr>
+            </thead>
+            <tbody id="crypto-table-body">
+                <!-- Data will be inserted here by scripts.js -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>© 2024 HodlInfo Clone</p>
+    </footer>
+    <script src="/scripts.js"></script>
+</body>
+</html>

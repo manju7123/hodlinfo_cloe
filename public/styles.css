@@ -1,0 +1,173 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* Default light mode background */
+    color: #333; /* Default light mode text color */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #121212; /* Dark mode background */
+    color: #e0e0e0; /* Dark mode text color */
+}
+
+/* Header */
+header {
+    background-color: #222; /* Dark header background */
+    color: #fff;
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.dropdowns {
+    display: flex;
+    align-items: center;
+}
+
+.currency-select {
+    margin-right: 1rem;
+}
+
+.buy-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.telegram-btn {
+    background-color: #0088cc;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+}
+
+
+.toggle-label {
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-label::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+#theme-toggle:checked + .toggle-label {
+    background-color: #4caf50;
+}
+
+#theme-toggle:checked + .toggle-label::before {
+    transform: translateX(14px);
+}
+
+/* Table */
+.crypto-table {
+    padding: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Media Queries */
+
+/* Mobile */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dropdowns {
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    .currency-select {
+        margin-bottom: 0.5rem;
+    }
+
+    .buy-button {
+        width: 100%;
+    }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 900px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .dropdowns {
+        flex-direction: row;
+    }
+}
+
+/* Laptop */
+@media (min-width: 901px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .dropdowns {
+        flex-direction: row;
+    }
+}
